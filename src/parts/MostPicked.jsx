@@ -1,17 +1,11 @@
 import React from "react";
 
 import Button from "../elements/Button";
-import Breadcrumb from "elements/Breadcrumb";
 
 export default function MostPicked(props) {
-  const breadcrumb = [
-    { pageTitle: "Home", pageHref: "" },
-    { pageTitle: "House Details", pageHref: "" },
-  ];
   return (
     <section className="container" ref={props.refMostPicked}>
       <h4 className="mb-3">Most Picked</h4>
-      <Breadcrumb data={breadcrumb} />
       <div className="container-grid">
         {props.data.map((item, index) => {
           return (

@@ -1,13 +1,11 @@
 /*!
- * Bootstrap v4.5.0 (https://getbootstrap.com/)
- * Copyright 2011-2020 The Bootstrap Authors
- * Copyright 2011-2020 Twitter, Inc.
+ * Bootstrap v4.4.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-// ini tempat font
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,700&display=swap");
 @import "colorVariables";
 @import "functions";
 @import "variables";
@@ -55,8 +53,8 @@
   color: $primary;
 
   &:hover {
-    text-decoration: none;
     color: $primary;
+    text-decoration: none;
   }
 }
 
@@ -69,7 +67,7 @@ header {
   .navbar {
     height: 80px;
 
-    .navbar-nav {
+    ul.navbar-nav {
       li.nav-item {
         &.active {
           a.nav-link {
@@ -79,6 +77,7 @@ header {
 
         a {
           &.nav-link {
+            letter-spacing: 1px;
             color: $gray-900;
             padding-left: 1rem;
             padding-right: 1rem;
@@ -93,13 +92,13 @@ header {
   }
 }
 
+section {
+  margin-bottom: 70px;
+}
+
 .img-hero {
   width: 540px;
   height: 420px;
-}
-
-section {
-  margin-bottom: 70px;
 }
 
 .img-cover {
@@ -108,7 +107,7 @@ section {
   width: 100%;
 }
 
-.img-cover {
+.img-contain {
   object-fit: contain;
   height: 100%;
   width: 100%;
@@ -230,8 +229,8 @@ footer {
   padding-top: 50px;
 
   .brand-tagline {
-    color: $gray-500;
     margin-top: 8px;
+    color: $gray-500;
     font-weight: 300;
   }
 
