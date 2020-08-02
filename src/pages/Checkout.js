@@ -106,7 +106,7 @@ export default class Checkout extends Component {
                       <Fade>
                         <Button
                           className="btn mb-3"
-                          type="button"
+                          type="link"
                           isBlock
                           isPrimary
                           hasShadow
@@ -118,6 +118,7 @@ export default class Checkout extends Component {
                     )}
                   <Button
                     className="btn"
+                    isLight
                     type="link"
                     isBlock
                     href={`/properties/${ItemDetails._id}`}
@@ -134,7 +135,7 @@ export default class Checkout extends Component {
                       <Fade>
                         <Button
                           className="btn mb-3"
-                          type="button"
+                          type="link"
                           isBlock
                           isPrimary
                           hasShadow
@@ -146,7 +147,8 @@ export default class Checkout extends Component {
                     )}
                   <Button
                     className="btn"
-                    type="button"
+                    type="link"
+                    isLight
                     isBlock
                     onClick={prevStep}
                   >
