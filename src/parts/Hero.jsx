@@ -53,7 +53,7 @@ export default function Hero(props) {
                   alt={`${props.data.travelers} Travelers`}
                 />
                 <h6 className="mt-3">
-                  {numberFormat(props.data.travelers)}
+                  {numberFormat(props.data.travelers)}{" "}
                   <span className="text-gray-500 font-wight-light">
                     Travelers
                   </span>
@@ -67,7 +67,7 @@ export default function Hero(props) {
                   alt={`${props.data.treasure} Treasure`}
                 />
                 <h6 className="mt-3">
-                  {numberFormat(props.data.treasures)}
+                  {numberFormat(props.data.treasure)}{" "}
                   <span className="text-gray-500 font-wight-light">
                     Treasure
                   </span>
@@ -81,7 +81,7 @@ export default function Hero(props) {
                   alt={`${props.data.cities} Cities`}
                 />
                 <h6 className="mt-3">
-                  {numberFormat(props.data.cities)}
+                  {numberFormat(props.data.cities)}{" "}
                   <span className="text-gray-500 font-wight-light">Cities</span>
                 </h6>
               </div>
@@ -92,13 +92,13 @@ export default function Hero(props) {
               <img
                 src={ImageHero}
                 alt="Hero"
-                className="img-fluid img-hero mt-2 ml-2 position-absolute"
+                className="img-fluid position-absolute"
                 style={{ margin: "-30px 0 0 -30px", zIndex: 1 }}
               />
               <img
                 src={ImageHero_}
                 alt="Hero Frame"
-                className="img-fluid img-hero border-bottom position-absolute"
+                className="img-fluid position-absolute"
                 style={{ margin: "0 -15px -15px 0" }}
               />
             </div>

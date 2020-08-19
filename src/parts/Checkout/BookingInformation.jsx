@@ -5,24 +5,26 @@ import InputText from "elements/Form/InputText";
 export default function BookingInformation(props) {
   const { data, ItemDetails, checkout } = props;
 
+  console.log(ItemDetails);
+
   return (
     <Fade>
       <div className="container" style={{ marginBottom: 30 }}>
         <div className="row justify-content-center align-items-center">
-          <div className="col-5 border-right py-5" style={{ height: 270 }}>
+          <div className="col-5 border-right pr-5" style={{ height: 270 }}>
             <Fade delay={300}>
               <div className="card border-0">
                 <figure className="img-wrapper" style={{ height: 270 }}>
                   <img
-                    src={ItemDetails.imageUrls[0].url}
-                    alt={ItemDetails.name}
+                    src={`${process.env.REACT_APP_HOST}/${ItemDetails.imageId[0].imageUrl}`}
+                    alt={ItemDetails.title}
                     className="img-cover"
                   />
                 </figure>
                 <div className="row align-items-center">
                   <div className="col">
                     <div className="meta-wrapper">
-                      <h5>{ItemDetails.name}</h5>
+                      <h5>{ItemDetails.title}</h5>
                       <span className="text-gray-500">
                         {ItemDetails.city}, {ItemDetails.country}
                       </span>
@@ -31,7 +33,7 @@ export default function BookingInformation(props) {
                   <div className="col-auto">
                     <span>
                       ${+checkout.duration * ItemDetails.price} USD
-                      <span className="text-gray-500">per</span>
+                      <span className="text-gray-500"> per </span>
                       {checkout.duration} {ItemDetails.unit}
                       {+checkout.duration > 1 ? "s" : ""}
                     </span>
